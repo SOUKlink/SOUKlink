@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoukLink - Vitrine des Coopératives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #8B4513;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        
+        .cooperatives {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .coop-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .coop-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .coop-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .coop-card h3 {
+            padding: 1rem;
+            color: #8B4513;
+            background-color: #f9f3e9;
+        }
+        
+        .coop-card p {
+            padding: 0 1rem 1.5rem;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #8B4513;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #a05a2c;
+        }
+        
+        /* Page des produits */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin: 1rem 0 2rem;
+        }
+        
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .cooperatives {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .coop-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page d'accueil -->
+    <div id="home-page">
+        <header>
+            <div class="logo">SoukLink</div>
+            <div class="tagline">Le lien direct avec les coopératives artisanales</div>
+        </header>
+        
+        <div class="main-content">
+            <section class="intro">
+                <h2>Bienvenue sur SoukLink</h2>
+                <p>SoukLink est une plateforme qui met en lumière le travail exceptionnel des coopératives artisanales marocaines. Nous connectons les artisans talentueux avec des clients qui apprécient l'authenticité et la qualité des produits traditionnels.</p>
+                <p>Découvrez ci-dessous nos coopératives partenaires et leurs produits uniques.</p>
+            </section>
+            
+            <section class="cooperatives">
+                <div class="coop-card">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coopérative des Saveurs">
+                    <h3>Coopérative des Saveurs</h3>
+                    <p>Spécialisée dans les produits alimentaires traditionnels: miels, huiles et épices de qualité supérieure.</p>
+                    <a href="#coop1" class="btn">Découvrir</a>
+                </div>
+                
+                <div class="coop-card">
+                    <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coopérative Beauté Naturelle">
+                    <h3>Coopérative Beauté Naturelle</h3>
+                    <p>Produits cosmétiques et de bien-être à base d'ingrédients 100% naturels et traditionnels.</p>
+                    <a href="#coop2" class="btn">Découvrir</a>
+                </div>
+                
+                <div class="coop-card">
+                    <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coopérative Artisanat Authentique">
+                    <h3>Coopérative Artisanat Authentique</h3>
+                    <p>Objets artisanaux et ustensiles traditionnels fabriqués selon des méthodes ancestrales.</p>
+                    <a href="#coop3" class="btn">Découvrir</a>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Pages des coopératives (initialement cachées) -->
+    
+    <!-- Coopérative 1 -->
+    <div id="coop1" style="display: none;">
+        <header>
+            <div class="logo">SoukLink</div>
+            <div class="tagline">Coopérative des Saveurs</div>
+        </header>
+        
+        <div class="main-content">
+            <a href="#home-page" class="btn back-btn">Retour à l'accueil</a>
+            
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #8B4513;">Nos Produits Alimentaires</h2>
+            
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <div class="product-card">
+                    <img src="media/image1.jpeg" alt="Miel de thym">
+                    <div class="product-info">
+                        <h3>Miel de thym</h3>
+                        <p>عسل طبيعي مستخلص من زهور الزعتر الجبلي. ذو طعم قوي ونكهة مركّزة. مفيد للجهاز التنفسي والمناعة.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="product-card">
+                    <img src="media/image2.jpeg" alt="Huile d'argan alimentaire">
+                    <div class="product-info">
+                        <h3>Huile d'argan alimentaire</h3>
+                        <p>زيت طبيعي مستخرج من حبوب الأركان. يُستخدم في الطبخ وله فوائد صحية. مصدره مناطق سوس وأكادير.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="product-card">
+                    <img src="media/image3.jpeg" alt="Amlou">
+                    <div class="product-info">
+                        <h3>Amlou</h3>
+                        <p>تحضير تقليدي من زيت الأركان واللوز والعسل. يُؤكل مع الخبز ويُقدَّم في الفطور. غني بالطاقة وذو نكهة فريدة.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 4 -->
+                <div class="product-card">
+                    <img src="media/image4.jpeg" alt="Cumin en poudre">
+                    <div class="product-info">
+                        <h3>Cumin en poudre</h3>
+                        <p>توابل أساسية في المطبخ المغربي. تُستخدم مع الطاجين والشوربة. نبتة عطرية تُزرع في مناطق الجنوب الشرقي.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 5 -->
+                <div class="product-card">
+                    <img src="media/image5.jpeg" alt="Miel d'euphorbe">
+                    <div class="product-info">
+                        <h3>Miel d'euphorbe</h3>
+                        <p>عسل نادر وقوي من نبتة الدغموس الصحراوية. طعمه لاذع وله خصائص علاجية قوية. يشتهر به الجنوب المغربي.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 6 -->
+                <div class="product-card">
+                    <img src="media/image7.jpeg" alt="Farine d'orge">
+                    <div class="product-info">
+                        <h3>Farine d'orge</h3>
+                        <p>طحين طبيعي كامل من حبوب الشعير. يُستخدم في تحضير الخبز البلدي. مفيد للهضم ويعطي طاقة طويلة الأمد.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Coopérative 2 -->
+    <div id="coop2" style="display: none;">
+        <header>
+            <div class="logo">SoukLink</div>
+            <div class="tagline">Coopérative Beauté Naturelle</div>
+        </header>
+        
+        <div class="main-content">
+            <a href="#home-page" class="btn back-btn">Retour à l'accueil</a>
+            
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #8B4513;">Nos Produits de Beauté</h2>
+            
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <div class="product-card">
+                    <img src="media/image36.jpeg" alt="Argan cosmétique">
+                    <div class="product-info">
+                        <h3>Argan cosmétique</h3>
+                        <p>زيت طبيعي للبشرة والشعر. يحتوي على فيتامين E ويُنعّم الجلد. منتج نادر من سوس.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="product-card">
+                    <img src="media/image14.png" alt="Savon noir à l'huile d'olive">
+                    <div class="product-info">
+                        <h3>Savon noir à l'huile d'olive</h3>
+                        <p>مستحضر تقليدي لتنظيف الجلد. يُستخدم في الحمام المغربي. ينظف البشرة ويمنحها نعومة.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="product-card">
+                    <img src="media/image27.jpeg" alt="Argile ghassoul">
+                    <div class="product-info">
+                        <h3>Argile ghassoul</h3>
+                        <p>تراب معدني طبيعي للتجميل. يُستخدم للبشرة والشعر. يستخرج من جبال الأطلس.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 4 -->
+                <div class="product-card">
+                    <img src="media/image28.jpeg" alt="Huile de figue de barbarie">
+                    <div class="product-info">
+                        <h3>Huile de figue de barbarie</h3>
+                        <p>زيت نادر وغني بمضادات الأكسدة. يُستخدم في مستحضرات التجميل. ينتج من مناطق سيدي إفني والجنوب.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 5 -->
+                <div class="product-card">
+                    <img src="media/image34.jpeg" alt="Huile de lentisque">
+                    <div class="product-info">
+                        <h3>Huile de lentisque</h3>
+                        <p>زيت طبيعي يُستخدم للبشرة والتجميل. يُستخرج من شجرة الضرو البرية. شائع في جبال الريف.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 6 -->
+                <div class="product-card">
+                    <img src="media/image40.png" alt="Savon à l'argan">
+                    <div class="product-info">
+                        <h3>Savon à l'argan</h3>
+                        <p>صابون ناعم يُرطب البشرة. يُصنع من زيت الأركان الطبيعي. منتج تقليدي من الجنوب المغربي.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Coopérative 3 -->
+    <div id="coop3" style="display: none;">
+        <header>
+            <div class="logo">SoukLink</div>
+            <div class="tagline">Coopérative Artisanat Authentique</div>
+        </header>
+        
+        <div class="main-content">
+            <a href="#home-page" class="btn back-btn">Retour à l'accueil</a>
+            
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #8B4513;">Nos Produits Artisanaux</h2>
+            
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <div class="product-card">
+                    <img src="media/image21.jpeg" alt="Tajine en terre cuite">
+                    <div class="product-info">
+                        <h3>Tajine en terre cuite</h3>
+                        <p>وعاء تقليدي للطبخ ببطء على الفحم. يحافظ على النكهة ويُقدَّم مباشرة. صناعة يدوية من مناطق مثل آسفي.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="product-card">
+                    <img src="media/image47.jpeg" alt="Tamis artisanal">
+                    <div class="product-info">
+                        <h3>Tamis artisanal</h3>
+                        <p>أداة لفصل الحبوب أو الطحين. مصنوع من الخشب والسلك يدويًا. رمز من رموز البيوت القروية.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="product-card">
+                    <img src="media/image48.png" alt="Récipient en osier">
+                    <div class="product-info">
+                        <h3>Récipient en osier</h3>
+                        <p>سلة تُستعمل للتخزين أو التسوق. منسوجة يدويًا بمواد طبيعية. صديقة للبيئة وعملية.</p>
+                    </div>
+                </div>
+                
+                <!-- Produit 4 -->
+                <div class="product-card">
+                    <img src="media/image23.jpeg" alt="Chapeaux de paille artisanaux">
+                    <div class="product-info">
+                        <h3>Chapeaux de paille artisanaux</h3>
+                        <p>قبعات خفيفة للحماية من الشمس. منسوجة يدويًا وتُستعمل في الحقول. شائعة في الشمال والمناطق الجبلية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 SoukLink - Tous droits réservés</p>
+        <p>Contact: contact@souklink.com | Tél: +212 6 12 34 56 78</p>
+    </footer>
+    
+    <script>
+        // Gestion de la navigation entre les pages
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Masquer toutes les pages
+                document.querySelectorAll('div[id^="coop"]').forEach(page => {
+                    page.style.display = 'none';
+                });
+                document.getElementById('home-page').style.display = 'none';
+                
+                // Afficher la page cible
+                const targetId = this.getAttribute('href').substring(1);
+                if(targetId === 'home-page') {
+                    document.getElementById('home-page').style.display = 'block';
+                } else {
+                    document.getElementById(targetId).style.display = 'block';
+                }
+                
+                // Défilement vers le haut
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Au chargement, afficher uniquement la page d'accueil
+        window.onload = function() {
+            document.querySelectorAll('div[id^="coop"]').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.getElementById('home-page').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
